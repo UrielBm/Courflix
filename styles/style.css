@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #000000;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+}
+header .wrapper-nav {
+  background: rgba(0, 0, 0, 0.801218);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
+  height: 65px;
+}
+header .wrapper-nav .wrapper-logo {
+  display: flex;
+  margin: 0 81px;
+}
+header .wrapper-nav .wrapper-logo .burger-button {
+  background: none;
+  display: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin: 0px 13px;
+}
+header .wrapper-nav .wrapper-logo .burger-button .burger-icon {
+  width: 35px;
+  height: 4px;
+}
+@media only screen and (max-width: 600px) {
+  header .wrapper-nav .wrapper-logo .burger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+header .wrapper-nav .wrapper-logo .link-boton {
+  width: 150px;
+}
+header .wrapper-nav .wrapper-logo .link-boton .logo {
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  header .wrapper-nav .wrapper-logo .link-boton .logo {
+    margin: 0 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header .wrapper-nav .wrapper-logo {
+    margin: 0 10px;
+  }
+}
+header .wrapper-nav .wrapper-links {
+  display: flex;
+  justify-content: space-around;
+}
+header .wrapper-nav .wrapper-links .link {
+  color: white;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0 25px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 600px) {
+  header .wrapper-nav .wrapper-links {
+    display: none;
+  }
+}
+
+.wrapper-main, .wrapperMainMovie {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-end;
+  background-image: url(../assets/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px 0 50px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main, .wrapperMainMovie {
+    padding: 100px 0 25px;
+  }
+}
+.wrapper-main .wrapper-description, .wrapperMainMovie .wrapper-description {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  margin-bottom: 15px;
+  max-width: 650px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main .wrapper-description, .wrapperMainMovie .wrapper-description {
+    max-width: 100%;
+    margin-left: 20px;
+  }
+}
+.wrapper-main .wrapper-description .text-original, .wrapperMainMovie .wrapper-description .text-original {
+  color: white;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main .wrapper-description .text-original, .wrapperMainMovie .wrapper-description .text-original {
+    display: none;
+  }
+}
+.wrapper-main .wrapper-description .title, .wrapperMainMovie .wrapper-description .title {
+  color: white;
+  font-size: 7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main .wrapper-description .title, .wrapperMainMovie .wrapper-description .title {
+    font-size: 2rem;
+  }
+}
+.wrapper-main .wrapper-description .title-movie, .wrapperMainMovie .wrapper-description .title-movie {
+  color: white;
+  font-size: 10rem;
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main .wrapper-description .title-movie, .wrapperMainMovie .wrapper-description .title-movie {
+    font-size: 4rem;
+  }
+}
+.wrapper-main .wrapper-description .description-short, .wrapperMainMovie .wrapper-description .description-short {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main .wrapper-description .description-short, .wrapperMainMovie .wrapper-description .description-short {
+    display: block;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+.wrapper-main .wrapper-description .wrapper-botenes-serie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 26px;
+}
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie {
+  background-color: rgba(157, 151, 151, 0.541521);
+  border: none;
+  border-radius: 9px;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px 40px;
+  transition: 0.3s;
+}
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie .link-movie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie .link-movie {
+  color: white;
+  text-decoration: none;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+  }
+}
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie:hover, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie:hover {
+  background-color: #ED0A1D;
+}
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie:nth-child(2), .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie:nth-child(2) {
+  margin-left: 35px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie:nth-child(2), .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie:nth-child(2) {
+    margin-left: 10px;
+  }
+}
+.wrapper-main .wrapper-description .text-description, .wrapperMainMovie .wrapper-description .text-description {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 33px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main .wrapper-description .text-description, .wrapperMainMovie .wrapper-description .text-description {
+    display: none;
+  }
+}
+
+.wrapper-category {
+  background-color: #000000;
+  padding: 20px 0;
+  padding-left: 80px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-category {
+    padding-left: 20px;
+  }
+}
+.wrapper-category .title-category {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-category .title-category {
+    font-size: 1.3rem;
+  }
+}
+.wrapper-category .content-category {
+  display: flex;
+  overflow-x: auto;
+  margin-right: 20px;
+}
+.wrapper-category .content-category .wrapper-watching {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 10px 0;
+  max-width: 320px;
+}
+.wrapper-category .content-category .wrapper-watching .link-category {
+  margin-right: 20px;
+}
+.wrapper-category .content-category .wrapper-watching .link-category .imagenes-category {
+  width: 300px;
+  height: 190px;
+  margin-bottom: 15px;
+}
+.wrapper-category .content-category .wrapper-watching .barra-progreso-gray {
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #858585;
+  width: 70%;
+  height: 7px;
+}
+.wrapper-category .content-category .wrapper-watching .barra-progreso-gray .barra-progreso-red {
+  background-color: #C60F0E;
+  height: 100%;
+}
+
+.wrapperMainMovie {
+  background-image: url(../assets/img/backgroundmovie.gif);
+  background-position: center;
+}
+
+/*# sourceMappingURL=style.css.map */
