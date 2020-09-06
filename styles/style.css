@@ -10,6 +10,10 @@ a:visited {
   text-decoration: none;
 }
 
+b {
+  font-weight: 700;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -81,7 +85,7 @@ header .wrapper-nav .wrapper-links .link {
   }
 }
 
-.wrapper-main, .wrapperMainMovie {
+.wrapper-main, .wrapperMainSerie, .wrapperMainMovie {
   display: flex;
   justify-content: flex-start;
   align-content: flex-end;
@@ -91,11 +95,11 @@ header .wrapper-nav .wrapper-links .link {
   padding: 140px 0 50px;
 }
 @media only screen and (max-width: 600px) {
-  .wrapper-main, .wrapperMainMovie {
+  .wrapper-main, .wrapperMainSerie, .wrapperMainMovie {
     padding: 100px 0 25px;
   }
 }
-.wrapper-main .wrapper-description, .wrapperMainMovie .wrapper-description {
+.wrapper-main .wrapper-description, .wrapperMainSerie .wrapper-description, .wrapperMainMovie .wrapper-description {
   display: flex;
   flex-direction: column;
   margin-left: 80px;
@@ -103,62 +107,77 @@ header .wrapper-nav .wrapper-links .link {
   max-width: 650px;
 }
 @media only screen and (max-width: 600px) {
-  .wrapper-main .wrapper-description, .wrapperMainMovie .wrapper-description {
+  .wrapper-main .wrapper-description, .wrapperMainSerie .wrapper-description, .wrapperMainMovie .wrapper-description {
     max-width: 100%;
     margin-left: 20px;
   }
 }
-.wrapper-main .wrapper-description .text-original, .wrapperMainMovie .wrapper-description .text-original {
+.wrapper-main .wrapper-description .text-original, .wrapperMainSerie .wrapper-description .text-original, .wrapperMainMovie .wrapper-description .text-original {
   color: white;
   font-size: 2rem;
   margin: 0 0 20px 0;
   font-weight: 700;
 }
 @media only screen and (max-width: 600px) {
-  .wrapper-main .wrapper-description .text-original, .wrapperMainMovie .wrapper-description .text-original {
+  .wrapper-main .wrapper-description .text-original, .wrapperMainSerie .wrapper-description .text-original, .wrapperMainMovie .wrapper-description .text-original {
     display: none;
   }
 }
-.wrapper-main .wrapper-description .title, .wrapperMainMovie .wrapper-description .title {
+.wrapper-main .wrapper-description .title, .wrapperMainSerie .wrapper-description .title, .wrapperMainMovie .wrapper-description .title {
   color: white;
   font-size: 7rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 @media only screen and (max-width: 600px) {
-  .wrapper-main .wrapper-description .title, .wrapperMainMovie .wrapper-description .title {
+  .wrapper-main .wrapper-description .title, .wrapperMainSerie .wrapper-description .title, .wrapperMainMovie .wrapper-description .title {
     font-size: 2rem;
   }
 }
-.wrapper-main .wrapper-description .title-movie, .wrapperMainMovie .wrapper-description .title-movie {
+.wrapper-main .wrapper-description .title-movie, .wrapperMainSerie .wrapper-description .title-movie, .wrapperMainMovie .wrapper-description .title-movie {
   color: white;
   font-size: 10rem;
   font-weight: 700;
   font-family: "Dancing Script", cursive;
 }
 @media only screen and (max-width: 600px) {
-  .wrapper-main .wrapper-description .title-movie, .wrapperMainMovie .wrapper-description .title-movie {
+  .wrapper-main .wrapper-description .title-movie, .wrapperMainSerie .wrapper-description .title-movie, .wrapperMainMovie .wrapper-description .title-movie {
     font-size: 4rem;
   }
 }
-.wrapper-main .wrapper-description .description-short, .wrapperMainMovie .wrapper-description .description-short {
-  display: none;
+.wrapper-main .wrapper-description .description-short, .wrapperMainSerie .wrapper-description .description-short, .wrapperMainMovie .wrapper-description .description-short {
+  display: block;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 40px 0px;
 }
 @media only screen and (max-width: 600px) {
-  .wrapper-main .wrapper-description .description-short, .wrapperMainMovie .wrapper-description .description-short {
+  .wrapper-main .wrapper-description .description-short, .wrapperMainSerie .wrapper-description .description-short, .wrapperMainMovie .wrapper-description .description-short {
     display: block;
     color: white;
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 20px;
+    margin: 10px 0px;
   }
 }
-.wrapper-main .wrapper-description .wrapper-botenes-serie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie {
+.wrapper-main .wrapper-description .description-short .concidencia, .wrapperMainSerie .wrapper-description .description-short .concidencia, .wrapperMainMovie .wrapper-description .description-short .concidencia {
+  font-weight: 700;
+  color: green;
+}
+.wrapper-main .wrapper-description .description-short .clasificacion-movie, .wrapperMainSerie .wrapper-description .description-short .clasificacion-movie, .wrapperMainMovie .wrapper-description .description-short .clasificacion-movie {
+  border: 1px solid #979797;
+  border-radius: 8px;
+  padding: 3px 12px;
+}
+.wrapper-main .wrapper-description .wrapper-botenes-serie, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 26px;
 }
-.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie {
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-serie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie {
   background-color: rgba(157, 151, 151, 0.541521);
   border: none;
   border-radius: 9px;
@@ -167,36 +186,62 @@ header .wrapper-nav .wrapper-links .link {
   font-size: 1.2rem;
   padding: 20px 40px;
   transition: 0.3s;
+  margin-right: 30px;
 }
-.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie .link-movie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie .link-movie {
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie .link-movie, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-serie .link-movie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie .link-movie {
   color: white;
   text-decoration: none;
 }
 @media only screen and (max-width: 600px) {
-  .wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie {
+  .wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-serie, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie {
     font-size: 0.8rem;
     padding: 10px 20px;
+    margin-right: 10px;
   }
 }
-.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie:hover, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie:hover {
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie:hover, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-serie:hover, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie:hover {
   background-color: #ED0A1D;
 }
-.wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie:nth-child(2), .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie:nth-child(2) {
-  margin-left: 35px;
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-like-Dislike, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-like-Dislike, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-like-Dislike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: 2px solid #D8D8D8;
+  border-radius: 50%;
+  max-width: 59px;
+  max-height: 59px;
 }
 @media only screen and (max-width: 600px) {
-  .wrapper-main .wrapper-description .wrapper-botenes-serie .button-serie:nth-child(2), .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-serie:nth-child(2) {
+  .wrapper-main .wrapper-description .wrapper-botenes-serie .button-like-Dislike, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-like-Dislike, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-like-Dislike {
+    max-width: 35px;
+    max-height: 35px;
+  }
+}
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-like-Dislike .icon-like, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-like-Dislike .icon-like, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-like-Dislike .icon-like, .wrapper-main .wrapper-description .wrapper-botenes-serie .button-like-Dislike .icon-dislike, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-like-Dislike .icon-dislike, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-like-Dislike .icon-dislike {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-like-Dislike .icon-dislike, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-like-Dislike .icon-dislike, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-like-Dislike .icon-dislike {
+  transform: rotate(180deg);
+}
+.wrapper-main .wrapper-description .wrapper-botenes-serie .button-like-Dislike:last-child, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-like-Dislike:last-child, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-like-Dislike:last-child {
+  margin-left: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-main .wrapper-description .wrapper-botenes-serie .button-like-Dislike:last-child, .wrapperMainSerie .wrapper-description .wrapper-botenes-serie .button-like-Dislike:last-child, .wrapperMainMovie .wrapper-description .wrapper-botenes-serie .button-like-Dislike:last-child {
     margin-left: 10px;
   }
 }
-.wrapper-main .wrapper-description .text-description, .wrapperMainMovie .wrapper-description .text-description {
+.wrapper-main .wrapper-description .text-description, .wrapperMainSerie .wrapper-description .text-description, .wrapperMainMovie .wrapper-description .text-description {
   color: white;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 33px;
 }
 @media only screen and (max-width: 600px) {
-  .wrapper-main .wrapper-description .text-description, .wrapperMainMovie .wrapper-description .text-description {
+  .wrapper-main .wrapper-description .text-description, .wrapperMainSerie .wrapper-description .text-description, .wrapperMainMovie .wrapper-description .text-description {
     display: none;
   }
 }
@@ -205,6 +250,7 @@ header .wrapper-nav .wrapper-links .link {
   background-color: #000000;
   padding: 20px 0;
   padding-left: 80px;
+  margin-bottom: 50px;
 }
 @media only screen and (max-width: 600px) {
   .wrapper-category {
@@ -257,6 +303,111 @@ header .wrapper-nav .wrapper-links .link {
 .wrapperMainMovie {
   background-image: url(../assets/img/backgroundmovie.gif);
   background-position: center;
+}
+
+.wrapperMainSerie {
+  background-image: url(../assets/img/BackGroundStrangerThings.jpg);
+  background-position: center;
+}
+
+.wrapper-temporada {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 0;
+  padding-left: 80px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-temporada {
+    padding-left: 20px;
+  }
+}
+.wrapper-temporada .temporada {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.wrapper-temporada .wrapper-capitulos {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-temporada .wrapper-capitulos {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+.wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 30%;
+  margin: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+  }
+}
+.wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .wrapper-capitulo-imagen {
+  width: 100%;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .wrapper-capitulo-imagen {
+    margin-bottom: 0px;
+    margin-right: 20px;
+  }
+}
+.wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .wrapper-capitulo-imagen .imagen-capitulos {
+  width: 100%;
+}
+.wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .description-capitulos .info-capitulo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .description-capitulos .info-capitulo {
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+}
+.wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .description-capitulos .info-capitulo .titulo-capitulo {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .description-capitulos .info-capitulo .titulo-capitulo {
+    font-size: 0.8rem;
+  }
+}
+.wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .description-capitulos .info-capitulo .tiempo-duracion {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .description-capitulos .info-capitulo .tiempo-duracion {
+    font-size: 0.8rem;
+  }
+}
+.wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .description-capitulos .text-description {
+  color: white;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper-temporada .wrapper-capitulos .wrapper-card-capitulos .description-capitulos .text-description {
+    font-size: 0.85rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

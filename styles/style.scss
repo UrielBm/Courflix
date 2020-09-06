@@ -14,6 +14,9 @@ a:visited{
     color: white;
     text-decoration: none;
 }
+b{
+    font-weight: 700;
+}
 header{
     position: fixed;
     width: 100%;
@@ -130,13 +133,28 @@ header{
         }
 
         .description-short{
-            display: none;
+            display:block;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height:20px;
+            margin:40px 0px ;
             @media only screen and (max-width: $phone-small){
                 display:block;
                 color: white;
                 font-size: .8rem;
                 font-weight: 400;
                 line-height:20px;
+                margin:10px 0px ;
+            }
+            .concidencia{
+                font-weight: 700;
+                color: green;
+            }
+            .clasificacion-movie{
+                border: 1px solid #979797;
+                border-radius: 8px;
+                padding: 3px 12px;
             }
         }
         .wrapper-botenes-serie{
@@ -152,6 +170,7 @@ header{
                 font-size: 1.2rem;
                 padding: 20px 40px;
                 transition: .3s;
+                margin-right: 30px;
                 .link-movie{
                     color: white;
                     text-decoration: none;
@@ -159,18 +178,41 @@ header{
                 @media only screen and (max-width: $phone-small) {
                     font-size: .8rem;
                     padding: 10px 20px;
+                    margin-right: 10px;
             }
             }
             .button-serie:hover{
                 background-color:#ED0A1D;
             }
-            .button-serie:nth-child(2){
-                margin-left: 35px;
-                @media only screen and (max-width: $phone-small){
-                    margin-left: 10px;
+            .button-like-Dislike{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: none;
+                border: 2px solid #D8D8D8;
+                border-radius: 50%;
+                max-width: 59px;
+                max-height: 59px;
+                @media only screen and (max-width: $phone-small) {
+                 max-width: 35px;
+                 max-height: 35px;
+            }
+                .icon-like{
+                 display: inline-block;
+                 margin: 0 auto;
+                 width: 100%;
+                }
+                .icon-dislike{
+                    @extend .icon-like;
+                    transform: rotate(180deg);
                 }
             }
-            
+            .button-like-Dislike:last-child{
+                margin-left: 30px;
+                @media only screen and (max-width: $phone-small) {
+                    margin-left: 10px;
+            }
+            }
         }
         .text-description{
             color: white;
@@ -187,6 +229,7 @@ header{
     background-color: #000000;
     padding: 20px 0;
     padding-left: 80px;
+    margin-bottom:50px;
     @media only screen and (max-width: $phone-small){
         padding-left: 20px;
     }
@@ -239,4 +282,94 @@ header{
     @extend .wrapper-main;
     background-image: url(../assets/img/backgroundmovie.gif);
     background-position: center;
+}
+.wrapperMainSerie{
+    @extend .wrapper-main;
+    background-image: url(../assets/img/BackGroundStrangerThings.jpg);
+    background-position: center;
+}
+.wrapper-temporada{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 0;
+    padding-left: 80px;
+    @media only screen and (max-width: $phone-small){
+        padding-left: 20px;
+    }
+    .temporada{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .wrapper-capitulos{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        @media only screen and (max-width: $phone-small){
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        .wrapper-card-capitulos{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            max-width: 30%;
+            margin: 30px;
+            @media only screen and (max-width: $phone-small){
+               max-width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 30px;
+            }
+            .wrapper-capitulo-imagen{
+                width: 100%;
+                margin-bottom: 10px;
+                @media only screen and (max-width: $phone-small){
+                    margin-bottom: 0px;
+                    margin-right: 20px;
+                }
+                .imagen-capitulos{
+                    width: 100%;
+                }
+            }
+            .description-capitulos{
+                .info-capitulo{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    @media only screen and (max-width: $phone-small){
+                        flex-direction: column;
+                        margin-bottom: 5px;
+                    }
+                    .titulo-capitulo{
+                        color: white;
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        @media only screen and (max-width: $phone-small){
+                            font-size: .8rem;
+                        }
+                    }
+                    .tiempo-duracion{
+                        color:white;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        @media only screen and (max-width: $phone-small){
+                            font-size: .8rem;
+                        }
+                    }
+                }
+                .text-description{
+                    color: white;
+                    text-align: justify;
+                    font-size: 1.2rem;
+                    @media only screen and (max-width: $phone-small){
+                        font-size: .85rem;
+                    }
+                }
+            }
+         }
+    }
 }
