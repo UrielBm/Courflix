@@ -305,7 +305,7 @@ header{
     }
     .wrapper-capitulos{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-wrap: wrap;
         @media only screen and (max-width: $phone-small){
             flex-direction: column;
@@ -314,9 +314,9 @@ header{
         .wrapper-card-capitulos{
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            max-width: 30%;
-            margin: 30px;
+            justify-content: space-between;
+            max-width: 25%;
+            margin: 30px 30px 30px 0px;
             @media only screen and (max-width: $phone-small){
                max-width: 100%;
                 display: flex;
