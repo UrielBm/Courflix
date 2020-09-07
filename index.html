@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css"/>
+    <script type="text/javascript" src="./menu.js"></script>
     <title>Courflix</title>
 </head>
 <body>
-    <header id="inicio">
+    <header>
         <nav class="wrapper-nav">
             <div class="wrapper-logo">
-                    <button class="burger-button" onclick="">
+                    <button class="burger-button" onclick={desplegar()}>
                         <img src="./assets/img/Rectangle.png" alt="menu-hambuerguesa" class="burger-icon"/>
                         <img src="./assets/img/Rectangle.png" alt="menu-hambuerguesa" class="burger-icon"/>
                         <img src="./assets/img/Rectangle.png" alt="menu-hambuerguesa" class="burger-icon"/>
                     </button>
                 <a  href="./index.html" class="link-logo"><img src="./assets/img/Logo.png" alt="logo-CourFlix" class="logo" /></a>
             </div>
-                <ul class="wrapper-links">
+                <ul class="wrapper-links" id="MenuDesplegable">
                     <a href="#inicio" class="link"><li>Inicio</li></a>
                     <a href="#Series" class="link"><li>Serie</li></a>
                     <a href="#" class="link"><li>Películas</li></a>
