@@ -71,14 +71,22 @@ header{
                 color: white;
                 text-decoration: none;
                 box-sizing: border-box;
-                margin:  0 25px;
+                margin:  0 50px;
                 font-family: $font;
                 font-weight: 700;
                 font-size: 1.2rem;
-
+                @media only screen and (max-width: $phone-small) {
+                    font-size: .9rem;
+                    font-weight: 400;
+                    }
             }
             @media only screen and (max-width: $phone-small) {
-            display: none;   
+            background: #000000;
+            position: fixed;
+            margin-top: 270px;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px 40px 20px 20px;
             }
         }
     }
@@ -318,7 +326,7 @@ header{
             max-width: 25%;
             margin: 30px 30px 30px 0px;
             @media only screen and (max-width: $phone-small){
-               max-width: 300px;
+               max-width: 325px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
