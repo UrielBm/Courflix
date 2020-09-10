@@ -213,7 +213,7 @@ header{
                 }
                 .icon-dislike{
                     @extend .icon-like;
-                    transform: rotate(180deg);
+                    
                 }
             }
             .button-like-Dislike:last-child{
