@@ -50,6 +50,14 @@ header .wrapper-nav .wrapper-logo .burger-button .burger-icon {
     align-items: center;
   }
 }
+@media only screen and (max-width: 768px) {
+  header .wrapper-nav .wrapper-logo .burger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 header .wrapper-nav .wrapper-logo .link-boton {
   width: 150px;
 }
@@ -68,9 +76,27 @@ header .wrapper-nav .wrapper-logo .link-boton .logo {
 }
 header .wrapper-nav .wrapper-links {
   display: flex;
+}
+@media only screen and (max-width: 600px) {
+  header .wrapper-nav .wrapper-links {
+    display: none;
+    position: fixed;
+    background-color: #000000;
+    box-sizing: border-box;
+    margin-top: 460px;
+  }
+}
+header .wrapper-nav .wrapper-links .contenedor_links {
+  display: flex;
   justify-content: space-around;
 }
-header .wrapper-nav .wrapper-links .link {
+@media only screen and (max-width: 600px) {
+  header .wrapper-nav .wrapper-links .contenedor_links {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+header .wrapper-nav .wrapper-links .contenedor_links .link {
   color: white;
   text-decoration: none;
   box-sizing: border-box;
@@ -80,20 +106,9 @@ header .wrapper-nav .wrapper-links .link {
   font-size: 1.2rem;
 }
 @media only screen and (max-width: 600px) {
-  header .wrapper-nav .wrapper-links .link {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-}
-@media only screen and (max-width: 600px) {
-  header .wrapper-nav .wrapper-links {
-    display: none;
-    background: #000000;
-    position: fixed;
-    margin-top: 270px;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 40px 20px 20px;
+  header .wrapper-nav .wrapper-links .contenedor_links .link {
+    margin: 0px;
+    padding: 20px 20px 40px 20px;
   }
 }
 

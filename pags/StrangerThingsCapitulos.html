@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/style.css"/>
-    <script type="text/javascript" src="../menu.js"></script>
     <title>Cápitulos Stranger Things</title>
 </head>
 <body>
     <header>
         <nav class="wrapper-nav">
             <div class="wrapper-logo">
-                    <button class="burger-button" onclick="desplegar()">
+                    <button class="burger-button" onclick={Mostrar_Ocultar()}>
                         <img src="../assets/img/Rectangle.png" alt="menu-hambuerguesa" class="burger-icon"/>
                         <img src="../assets/img/Rectangle.png" alt="menu-hambuerguesa" class="burger-icon"/>
                         <img src="../assets/img/Rectangle.png" alt="menu-hambuerguesa" class="burger-icon"/>
                     </button>
                 <a  href="../index.html" class="link-logo"><img src="../assets/img/Logo.png" alt="logo-CourFlix" class="logo" /></a>
             </div>
-                <ul class="wrapper-links"  id="MenuDesplegable">
+            <div class="wrapper-links" id="MenuDesplegable" >
+                <ul class="contenedor_links">
                     <a href="../index.html" class="link"><li>Inicio</li></a>
                     <a href="#Series" class="link"><li>Series</li></a>
                     <a href="#" class="link"><li>Películas</li></a>
                     <a href="#" class="link"><li>Agregados recientemente</li></a>
                     <a href="#" class="link"><li>Mi lista</li></a>
                 </ul>
+            </div>
 
                 <!-- Iconos diseñados por <a href="https://www.flaticon.es/autores/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a> -->
         </nav>
@@ -148,5 +149,6 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="../menu.js"></script>
 </body>
 </html>

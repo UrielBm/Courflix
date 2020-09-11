@@ -3,6 +3,7 @@
 $palette:  rgba(0, 0, 0, 0.801218);
 $font:   'Open Sans', sans-serif;
 $phone-small: 600px;
+$tablets: 768px;
 $fontMovie: 'Dancing Script', cursive;
 $palette-progress: #858585;
 $palette-complete: #C60F0E;
@@ -48,6 +49,12 @@ header{
                     justify-content: space-around;
                     align-items: center; 
                 }
+                @media only screen and (max-width: $tablets){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center; 
+                }
             }
             .link-boton{
                 width: 150px;
@@ -65,29 +72,34 @@ header{
         }
         .wrapper-links{
             display: flex;
-            justify-content: space-around;
-            .link{
-
-                color: white;
-                text-decoration: none;
-                box-sizing: border-box;
-                margin:  0 50px;
-                font-family: $font;
-                font-weight: 700;
-                font-size: 1.2rem;
-                @media only screen and (max-width: $phone-small) {
-                    font-size: .9rem;
-                    font-weight: 400;
-                    }
-            }
             @media only screen and (max-width: $phone-small) {
-            display: none;
-            background: #000000;
-            position: fixed;
-            margin-top: 270px;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 20px 40px 20px 20px;
+                display: none;
+                position: fixed;
+                background-color: #000000;
+                box-sizing: border-box;
+                margin-top:460px;
+            }
+            .contenedor_links{
+                display: flex;
+                justify-content: space-around;
+                @media only screen and (max-width: $phone-small) {
+                    flex-direction: column;
+                    justify-content:space-around
+                }
+                .link{
+    
+                    color: white;
+                    text-decoration: none;
+                    box-sizing: border-box;
+                    margin:  0 50px;
+                    font-family: $font;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    @media only screen and (max-width: $phone-small) {
+                        margin: 0px;
+                        padding: 20px 20px 40px 20px
+                    }
+                }
             }
         }
     }
